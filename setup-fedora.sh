@@ -43,13 +43,15 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 ./aws/install
 
-# Install virtualbox-7
-dnf upgrade --refresh
-dnf install @development-tools -y 
-dnf install kernel-devel kernel-headers dkms qt5-qtx11extras elfutils-libelf-devel zlib-devel -y
-wget http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo -P /etc/yum.repos.d/
-dnf install VirtualBox-7.0 -y 
-systemctl enable vboxdrv --now
+################## THIS IS NOT WORKING YET!!! ##################
+# # Install virtualbox-7
+# dnf upgrade --refresh
+# dnf install @development-tools -y 
+# dnf install kernel-devel kernel-headers dkms qt5-qtx11extras elfutils-libelf-devel zlib-devel -y
+# wget http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo -P /etc/yum.repos.d/
+# dnf install VirtualBox-7.0 -y 
+# systemctl enable vboxdrv --now
+#################################################################
 
 # Install ansible
 dnf install -y python3-pip
