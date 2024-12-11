@@ -31,7 +31,7 @@ systemctl enable docker
 
 # Install terraform
 dnf install -y dnf-plugins-core
-dnf config-manager -y --add-repo https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
+dnf-3 config-manager -y --add-repo https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
 dnf -y install terraform
 
 # Install kubectl
