@@ -82,3 +82,11 @@ dnf group upgrade --with-optional Multimedia
 
 # Tilix
 dnf install -y tilix
+
+# minikube
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm
+rpm -Uvh minikube-latest.x86_64.rpm
+
+# k9s 
+wget https://github.com/derailed/k9s/releases/download/v0.50.9/k9s_linux_amd64.rpm
+rpm -i k9s_linux_amd64.rpm
