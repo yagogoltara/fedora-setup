@@ -30,9 +30,9 @@ systemctl start docker
 systemctl enable docker
 
 # Install terraform
-dnf install -y dnf-plugins-core
-dnf-3 config-manager -y --add-repo https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
-dnf -y install terraform
+wget https://releases.hashicorp.com/terraform/1.12.2/terraform_1.12.2_linux_amd64.zip
+unzip terraform*.zip
+mv ./terraform /usr/local/bin/
 
 # Install kubectl
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
